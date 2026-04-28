@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="HobbyTrack helps hobbyists organize creative projects, track sessions, and build consistent routines."
+    />
+    <title>HobbyTrack | Build consistency with the hobbies you love</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="HobbyTrack home">
+        <span class="brand-mark" aria-hidden="true">H</span>
+        <span>HobbyTrack</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it Works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="nav-cta" href="#app" data-open-auth data-plan="free">Start Free</a>
+    </header>
+
+    <main>
+      <section class="hero section-shell">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Plan, practice, and notice what is working</p>
+          <h1>A calm practice tracker for hobbies and skills you actually want to improve.</h1>
+          <p class="hero-text">
+            Plan your week, log each practice session, and see which hobbies are
+            getting attention so consistency can build without pressure.
+          </p>
+          <div class="hero-actions" aria-label="Hero actions">
+            <a class="button button-primary" href="#app" data-open-auth data-plan="free">Start Free</a>
+            <a class="button button-secondary" href="#showcase">See Product Preview</a>
+          </div>
+          <div class="hero-proof" aria-label="Product highlights">
+            <span>Weekly practice plans</span>
+            <span>Session logs</span>
+            <span>Attention insights</span>
+          </div>
+          <div class="hero-note">
+            Built for steady progress between work, dinner, lessons, and life.
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="HobbyTrack dashboard preview">
+          <div class="dashboard-frame float-soft">
+            <div class="window-controls" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="dash-topbar">
+              <div>
+                <span class="dash-kicker">Tuesday, 7:42 PM</span>
+                <h2>This week's practice plan</h2>
+              </div>
+              <span class="dash-pill">68% attention this week</span>
+            </div>
+            <div class="dash-grid">
+              <article class="dash-card featured-card">
+                <div class="card-row">
+                  <span class="activity-icon">G</span>
+                  <span class="status-dot"></span>
+                </div>
+                <h3>Guitar</h3>
+                <p>32 min logged today</p>
+                <div class="session-list">
+                  <span>Warmups</span>
+                  <span>Chord changes</span>
+                  <span>Song section B</span>
+                </div>
+                <div class="progress-track">
+                  <span style="width: 72%"></span>
+                </div>
+              </article>
+              <article class="dash-card">
+                <span class="activity-icon amber">C</span>
+                <h3>Ceramics</h3>
+                <p>Trim bowls Friday</p>
+                <small>Goal: 2 studio visits</small>
+              </article>
+              <article class="dash-card">
+                <span class="activity-icon clay">J</span>
+                <h3>Journaling</h3>
+                <p>9 day streak</p>
+                <small>Prompt saved</small>
+              </article>
+            </div>
+            <div class="week-panel">
+              <div class="week-heading">
+                <div>
+                  <span>Hobbies getting attention</span>
+                  <small>6h 40m logged across 4 hobbies</small>
+                </div>
+                <strong>6h 40m</strong>
+              </div>
+              <div class="bar-chart" aria-hidden="true">
+                <span style="height: 42%"></span>
+                <span style="height: 68%"></span>
+                <span style="height: 35%"></span>
+                <span style="height: 80%"></span>
+                <span style="height: 58%"></span>
+                <span style="height: 92%"></span>
+                <span style="height: 48%"></span>
+              </div>
+              <div class="day-labels" aria-hidden="true">
+                <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="app-shell section-shell reveal" id="app" aria-label="HobbyTrack product app">
+        <div class="app-topline">
+          <div>
+            <p class="eyebrow">MVP preview</p>
+            <h2>Your calm hobby workspace.</h2>
+            <p>
+              Create an account, choose a few hobbies, and start logging sessions
+              with a simple dashboard built for weekly momentum.
+            </p>
+          </div>
+          <div class="app-status" aria-live="polite">
+            <span id="appStatus">Signed out</span>
+          </div>
+        </div>
+
+        <div class="product-frame">
+          <aside class="product-nav" aria-label="Product navigation">
+            <a class="brand product-brand" href="#app">
+              <span class="brand-mark" aria-hidden="true">H</span>
+              <span>HobbyTrack</span>
+            </a>
+            <button class="product-nav-link active" type="button" data-view-target="dashboard">Dashboard</button>
+            <button class="product-nav-link" type="button" data-view-target="add-hobby">Add hobby</button>
+            <button class="product-nav-link" type="button" data-view-target="log-session">Log session</button>
+            <button class="product-nav-link" type="button" data-view-target="hobby-detail">Hobby detail</button>
+            <button class="product-nav-link muted-link" type="button" data-sign-out>Sign out</button>
+            <button class="product-nav-link danger-link" type="button" data-reset-app>Reset local data</button>
+          </aside>
+
+          <div class="product-main">
+            <section class="product-view auth-view active" data-view="auth" aria-labelledby="auth-title">
+              <div class="auth-layout">
+                <div>
+                  <p class="eyebrow">Start free</p>
+                  <h3 id="auth-title">Create your local practice workspace.</h3>
+                  <p>
+                    Sign up to set one hobby, choose a weekly target, and log your
+                    first practice session on this device.
+                  </p>
+                </div>
+                <form class="product-card form-card" id="authForm">
+                  <p class="form-message" id="authMessage" aria-live="polite"></p>
+                  <div class="form-switch" role="tablist" aria-label="Auth mode">
+                    <button class="active" type="button" data-auth-mode="signup">Sign up</button>
+                    <button type="button" data-auth-mode="login">Log in</button>
+                  </div>
+                  <label>
+                    Name
+                    <input id="authName" name="name" type="text" autocomplete="name" maxlength="40" placeholder="Sam Taylor" />
+                  </label>
+                  <label>
+                    Email
+                    <input id="authEmail" name="email" type="email" autocomplete="email" maxlength="120" placeholder="you@example.com" required />
+                  </label>
+                  <label>
+                    Password
+                    <input id="authPassword" name="password" type="password" autocomplete="current-password" minlength="8" maxlength="128" placeholder="At least 8 characters" required />
+                  </label>
+                  <button class="button button-primary" type="submit">Continue</button>
+                </form>
+              </div>
+            </section>
+
+            <section class="product-view onboarding-view" data-view="onboarding" aria-labelledby="onboarding-title">
+              <div class="view-heading">
+                <p class="eyebrow">Onboarding</p>
+                <h3 id="onboarding-title">Start with one hobby you want to improve.</h3>
+                <p>Pick the skill, choose a weekly target that feels realistic, then write the next small action you can take.</p>
+              </div>
+              <form class="product-card onboarding-card" id="onboardingForm">
+                <div class="guided-steps" aria-label="Onboarding steps">
+                  <span>1. Skill area</span>
+                  <span>2. First hobby</span>
+                  <span>3. Weekly target</span>
+                  <span>4. First action</span>
+                </div>
+                <div class="form-grid">
+                  <label>
+                    What type of hobby or skill?
+                    <select id="hobbyType" name="hobbyType">
+                      <option value="Creative">Creative practice</option>
+                      <option value="Music">Music or performance</option>
+                      <option value="Language">Language learning</option>
+                      <option value="Movement">Movement or fitness</option>
+                      <option value="Craft">Craft or making</option>
+                      <option value="Study">Study or personal project</option>
+                    </select>
+                  </label>
+                  <label>
+                    First hobby or skill
+                    <input id="firstHobby" name="firstHobby" type="text" maxlength="40" placeholder="Watercolor, guitar, Spanish..." required />
+                  </label>
+                </div>
+                <div class="form-grid">
+                  <label>
+                    Weekly practice target
+                    <select id="weeklyGoal" name="weeklyGoal">
+                      <option value="90">Light: 90 minutes per week</option>
+                      <option value="180" selected>Steady: 3 hours per week</option>
+                      <option value="300">Focused: 5 hours per week</option>
+                      <option value="420">Deep: 7 hours per week</option>
+                    </select>
+                  </label>
+                  <label>
+                    First next step
+                    <input id="firstNextStep" name="firstNextStep" type="text" maxlength="120" placeholder="Practice chord changes for 20 minutes" required />
+                  </label>
+                </div>
+                <p class="onboarding-note">
+                  Your dashboard will use this to show today's practice plan. After you create it, the next action is to log your first session.
+                </p>
+                <p class="local-data-note">
+                  Your data is currently stored locally in this browser for the MVP version. Nothing is synced to a server yet.
+                </p>
+                <p class="form-message" id="onboardingMessage" aria-live="polite"></p>
+                <button class="button button-primary" type="submit">Create my dashboard</button>
+              </form>
+            </section>
+
+            <section class="product-view dashboard-view" data-view="dashboard" aria-labelledby="dashboard-title">
+              <div class="view-heading with-actions">
+                <div>
+                  <p class="eyebrow">Dashboard</p>
+                  <h3 id="dashboard-title">Today's plan</h3>
+                  <p id="dashboardSubcopy">Your next action will appear here whenever you open HobbyTrack.</p>
+                </div>
+                <div class="view-actions">
+                  <button class="button button-secondary" type="button" data-view-target="add-hobby">Add hobby</button>
+                  <button class="button button-primary" type="button" data-view-target="log-session">Log session</button>
+                </div>
+              </div>
+              <div class="dashboard-layout">
+                <article class="product-card today-plan">
+                  <span class="dash-kicker">Focus today</span>
+                  <h4 id="todayFocus">Guitar</h4>
+                  <p id="todayPlanText">Spend 25 minutes on warmups and one song section.</p>
+                  <button class="button button-primary first-action" type="button" data-view-target="log-session">Log first session</button>
+                  <div class="progress-track app-progress"><span id="todayProgress" style="width: 45%"></span></div>
+                </article>
+                <div class="stat-grid">
+                  <article class="product-card stat-card">
+                    <span>Weekly progress</span>
+                    <strong id="weeklyProgress">2h 25m</strong>
+                    <small id="weeklyGoalLabel">of 5h goal</small>
+                  </article>
+                  <article class="product-card stat-card">
+                    <span>Streak</span>
+                    <strong id="streakCount">4 days</strong>
+                    <small>Keep it gentle</small>
+                  </article>
+                  <article class="product-card stat-card">
+                    <span>Total time</span>
+                    <strong id="totalTime">14h 20m</strong>
+                    <small>Across all hobbies</small>
+                  </article>
+                </div>
+                <article class="product-card active-hobbies-card">
+                  <div class="card-row">
+                    <h4>Active hobbies</h4>
+                    <button type="button" data-view-target="add-hobby">Add</button>
+                  </div>
+                  <div class="hobby-list" id="activeHobbies"></div>
+                </article>
+                <article class="product-card weekly-review-card">
+                  <div class="card-row">
+                    <h4>Weekly review</h4>
+                    <span id="weeklyReviewProgress">0%</span>
+                  </div>
+                  <div class="review-grid">
+                    <div>
+                      <span>Sessions</span>
+                      <strong id="reviewSessions">0</strong>
+                    </div>
+                    <div>
+                      <span>Total time</span>
+                      <strong id="reviewTime">0m</strong>
+                    </div>
+                    <div>
+                      <span>Best active hobby</span>
+                      <strong id="reviewBestHobby">None yet</strong>
+                    </div>
+                  </div>
+                  <div class="mini-progress" aria-hidden="true"><span id="reviewProgressBar" style="width: 0%"></span></div>
+                  <p id="weeklyReviewSummary">Log your first session to begin your weekly review.</p>
+                </article>
+                <article class="product-card milestones-card">
+                  <div class="card-row">
+                    <h4>Milestones</h4>
+                    <span id="milestoneStatus">Upcoming</span>
+                  </div>
+                  <div class="milestone-list" id="milestoneList"></div>
+                </article>
+                <article class="product-card timeline-card">
+                  <h4>Progress timeline</h4>
+                  <div class="session-feed compact-feed" id="progressTimeline"></div>
+                </article>
+              </div>
+            </section>
+
+            <section class="product-view" data-view="add-hobby" aria-labelledby="add-hobby-title">
+              <div class="view-heading">
+                <p class="eyebrow">Add hobby</p>
+                <h3 id="add-hobby-title">Add another hobby only when you need one.</h3>
+                <p>Give it a weekly target and one next step so the dashboard knows what to suggest.</p>
+              </div>
+              <form class="product-card form-card" id="addHobbyForm">
+                <p class="form-message" id="addHobbyMessage" aria-live="polite"></p>
+                <div class="form-grid">
+                  <label>
+                    Hobby name
+                    <input id="newHobbyName" type="text" maxlength="40" placeholder="Photography" required />
+                  </label>
+                  <label>
+                    Weekly target
+                    <select id="newHobbyGoal">
+                      <option value="60">1 hour</option>
+                      <option value="120" selected>2 hours</option>
+                      <option value="180">3 hours</option>
+                      <option value="300">5 hours</option>
+                    </select>
+                  </label>
+                </div>
+                <label>
+                  Next step
+                  <input id="newHobbyPlan" type="text" maxlength="120" placeholder="Choose 12 photos to edit next" required />
+                </label>
+                <button class="button button-primary" type="submit">Add hobby</button>
+              </form>
+            </section>
+
+            <section class="product-view" data-view="log-session" aria-labelledby="log-session-title">
+              <div class="view-heading">
+                <p class="eyebrow">Log session</p>
+                <h3 id="log-session-title">Log what you just practiced.</h3>
+                <p>Keep it simple: time, focus, a short note, and the next step for your next session.</p>
+              </div>
+              <form class="product-card form-card" id="logSessionForm">
+                <p class="form-message" id="logSessionMessage" aria-live="polite"></p>
+                <div class="form-grid">
+                  <label>
+                    Hobby
+                    <select id="sessionHobby"></select>
+                  </label>
+                  <label>
+                    Minutes
+                    <input id="sessionMinutes" type="number" min="5" max="360" step="5" value="25" required />
+                  </label>
+                  <label>
+                    Date
+                    <input id="sessionDate" type="date" required />
+                  </label>
+                </div>
+                <label>
+                  Focus
+                  <input id="sessionFocus" type="text" maxlength="120" placeholder="Chord changes, color mixing, listening practice..." required />
+                </label>
+                <label>
+                  Note
+                  <textarea id="sessionNote" rows="4" maxlength="500" placeholder="What did you do, notice, or finish?" required></textarea>
+                </label>
+                <label>
+                  Next step
+                  <input id="sessionNextStep" type="text" maxlength="120" placeholder="What is the next small action?" required />
+                </label>
+                <label>
+                  Milestone
+                  <input id="sessionMilestone" type="text" maxlength="120" placeholder="Optional small win, finished piece, or personal best" />
+                </label>
+                <button class="button button-primary" type="submit">Save session</button>
+              </form>
+            </section>
+
+            <section class="product-view" data-view="hobby-detail" aria-labelledby="hobby-detail-title">
+              <div class="view-heading with-actions">
+                <div>
+                  <p class="eyebrow">Hobby detail</p>
+                  <h3 id="hobby-detail-title">Guitar</h3>
+                  <p id="hobbyDetailMeta">Current focus: Recent sessions and simple progress stats.</p>
+                </div>
+                <label class="compact-select-label">
+                  Switch hobby
+                  <select id="detailHobbySelect" aria-label="Choose hobby"></select>
+                </label>
+              </div>
+              <div class="detail-layout">
+                <div class="stat-grid detail-stats">
+                  <article class="product-card stat-card">
+                    <span>This week</span>
+                    <strong id="detailWeek">1h 15m</strong>
+                    <small id="detailGoal">of 2h goal</small>
+                    <div class="mini-progress" aria-hidden="true"><span id="detailProgress" style="width: 0%"></span></div>
+                  </article>
+                  <article class="product-card stat-card">
+                    <span>Sessions</span>
+                    <strong id="detailSessions">3</strong>
+                    <small id="detailSessionsMeta">sessions this week</small>
+                  </article>
+                  <article class="product-card stat-card">
+                    <span>Last logged</span>
+                    <strong id="detailLast">Today</strong>
+                    <small id="detailLastExact">Keep it visible</small>
+                  </article>
+                </div>
+                <article class="product-card sessions-card">
+                  <h4>Recent sessions</h4>
+                  <div class="session-feed" id="sessionFeed"></div>
+                </article>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="social-proof reveal" aria-label="Social proof">
+        <p>Built for hobbyists, makers, and lifelong learners</p>
+        <div class="proof-metrics">
+          <span>Local-first MVP</span>
+          <span>No credit card</span>
+          <span>Private by default</span>
+        </div>
+      </section>
+
+      <section class="section-shell section-block" id="features">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Features</p>
+          <h2>Everything you need to keep momentum visible.</h2>
+          <p>
+            Designed for the quiet middle of real practice: planning, logging,
+            reflecting, and coming back again.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card feature-card-large reveal">
+            <span class="feature-icon">01</span>
+            <h3>Track hobbies in one place</h3>
+            <p>Keep creative projects, lessons, routines, and notes organized without spreadsheets.</p>
+            <div class="mini-list" aria-hidden="true">
+              <span>Watercolor</span>
+              <span>Guitar</span>
+              <span>Spanish</span>
+            </div>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon">02</span>
+            <h3>Build routines gently</h3>
+            <p>Create weekly rhythms that support consistency without making hobbies feel rigid.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon">03</span>
+            <h3>Log milestones</h3>
+            <p>Capture small wins, finished pieces, personal records, and reflections as they happen.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon">04</span>
+            <h3>Visualize time spent</h3>
+            <p>See where your practice is going with calm charts and weekly summaries.</p>
+          </article>
+          <article class="feature-card feature-card-tall reveal">
+            <span class="feature-icon">05</span>
+            <h3>Set goals and streaks</h3>
+            <p>Choose goals that fit your life, then follow progress with a low-pressure weekly focus.</p>
+            <div class="streak-meter" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon">06</span>
+            <h3>Simple insights</h3>
+            <p>Understand what helps you show up, from best practice days to momentum patterns.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell section-block split-section" id="how-it-works">
+        <div class="section-heading reveal">
+          <p class="eyebrow">How it works</p>
+          <h2>Start small, then let your progress compound.</h2>
+        </div>
+        <div class="steps">
+          <article class="step reveal">
+            <span>1</span>
+            <div>
+              <h3>Choose your hobbies</h3>
+              <p>Add the hobbies you care about and set a realistic weekly intention for each one.</p>
+            </div>
+          </article>
+          <article class="step reveal">
+            <span>2</span>
+            <div>
+              <h3>Track sessions and progress</h3>
+              <p>Log time, focus, notes, milestones, and the next step after each session.</p>
+            </div>
+          </article>
+          <article class="step reveal">
+            <span>3</span>
+            <div>
+              <h3>Stay consistent and grow</h3>
+              <p>Review gentle insights and adjust your routine as your hobbies become part of life.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="product-showcase section-shell reveal" id="showcase">
+        <div class="showcase-copy">
+          <p class="eyebrow">Product preview</p>
+          <h2>A dashboard that respects your attention.</h2>
+          <p>
+            HobbyTrack keeps the essentials close: what you practiced, what changed,
+            and what is worth returning to next.
+          </p>
+        </div>
+        <div class="app-preview" aria-label="Detailed product preview">
+          <aside class="preview-sidebar">
+            <span class="mini-brand">HobbyTrack</span>
+            <a class="active" href="#">Dashboard</a>
+            <a href="#">Hobbies</a>
+            <a href="#">Goals</a>
+            <a href="#">Journal</a>
+            <div class="sidebar-hobbies" aria-label="Active hobbies">
+              <span>Active hobbies</span>
+              <p>Watercolor</p>
+              <p>Guitar</p>
+              <p>Spanish</p>
+            </div>
+          </aside>
+          <div class="preview-main">
+            <div class="preview-header">
+              <div>
+                <span class="dash-kicker">April focus</span>
+                <h3>Make practice feel lighter</h3>
+              </div>
+              <button type="button">Log session</button>
+            </div>
+            <div class="preview-cards">
+              <article>
+                <span>Time this week</span>
+                <strong>6h 40m</strong>
+                <small>+48m from last week</small>
+              </article>
+              <article>
+                <span>Current streak</span>
+                <strong>12 days</strong>
+                <small>Best: 18 days</small>
+              </article>
+              <article>
+                <span>Milestones</span>
+                <strong>8</strong>
+                <small>3 added this month</small>
+              </article>
+            </div>
+            <div class="focus-row">
+              <div>
+                <span class="dash-kicker">Next up</span>
+                <strong>Watercolor study</strong>
+                <p>Finish the warm/cool shadow exercise before Sunday.</p>
+              </div>
+              <div class="focus-ring" aria-hidden="true"><span>74%</span></div>
+            </div>
+            <div class="timeline">
+              <div><strong>Watercolor study</strong><span>Finished color mixing exercise</span><em>Today</em></div>
+              <div><strong>Spanish</strong><span>20 minutes listening practice</span><em>Yesterday</em></div>
+              <div><strong>Running</strong><span>First relaxed 5k this month</span><em>Friday</em></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell section-block" id="pricing">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Pricing</p>
+          <h2>Simple plans for steady progress.</h2>
+        </div>
+        <div class="pricing-grid">
+          <article class="price-card reveal">
+            <span class="recommend-label">Available now</span>
+            <h3>Free</h3>
+            <p>For getting started with a calm practice rhythm.</p>
+            <strong>$0</strong>
+            <ul>
+              <li>Track up to 3 hobbies</li>
+              <li>Log sessions</li>
+              <li>Weekly overview</li>
+              <li>Basic progress timeline</li>
+            </ul>
+            <a class="button button-secondary" href="#app" data-open-auth data-plan="free">Start Free</a>
+          </article>
+          <article class="price-card recommended reveal">
+            <span class="recommend-label">Coming soon</span>
+            <h3>Pro</h3>
+            <p>For long-term consistency across skills, notes, reviews, and history.</p>
+            <strong>59 kr<span>/month</span></strong>
+            <p class="price-alt">$6/month planned internationally</p>
+            <ul>
+              <li>Unlimited hobbies</li>
+              <li>Weekly reviews</li>
+              <li>Practice notes</li>
+              <li>Milestones</li>
+              <li>Full progress history</li>
+              <li>Export later</li>
+            </ul>
+            <a class="button button-secondary" href="#pricing">Coming Soon</a>
+          </article>
+          <article class="price-card supporter reveal">
+            <span class="recommend-label">Planned / waitlist</span>
+            <h3>Early Supporter</h3>
+            <p>For early users who want lifetime access and a voice in shaping HobbyTrack.</p>
+            <strong>299-499 kr</strong>
+            <p class="price-alt">One-time concept for early supporters</p>
+            <ul>
+              <li>Lifetime access for early users</li>
+              <li>Help shape the product</li>
+              <li>Founder updates</li>
+              <li>No subscription while in early access</li>
+            </ul>
+            <a
+              class="button button-secondary"
+              href="mailto:hello.hobbytrack@outlook.com?subject=HobbyTrack%20Early%20Access"
+            >
+              Join Waitlist
+            </a>
+          </article>
+        </div>
+        <p class="pricing-note reveal">
+          Start with the free MVP now. Pro and Early Supporter pricing are planned
+          options that will be finalized before payments are introduced.
+        </p>
+      </section>
+
+      <section class="section-shell section-block faq-section" id="faq">
+        <div class="section-heading reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2>Questions before you begin.</h2>
+        </div>
+        <div class="faq-list">
+          <details class="reveal">
+            <summary>Can I track more than one hobby?</summary>
+            <p>Yes. Free supports three hobbies, and Pro gives you unlimited hobbies, goals, and history.</p>
+          </details>
+          <details class="reveal">
+            <summary>Is HobbyTrack only for creative hobbies?</summary>
+            <p>No. It works well for music, crafts, fitness, reading, languages, gardening, and personal projects.</p>
+          </details>
+          <details class="reveal">
+            <summary>Does it send reminders?</summary>
+            <p>Not yet. The MVP focuses on tracking, local persistence, and simple weekly progress first.</p>
+          </details>
+          <details class="reveal">
+            <summary>Can I export my progress?</summary>
+            <p>Export is planned as part of Pro after the free MVP foundation is in place.</p>
+          </details>
+          <details class="reveal">
+            <summary>Will my hobby notes be private?</summary>
+            <p>Yes. HobbyTrack is private by default, and your personal logs are never public unless you share them.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="beta-section section-shell reveal" id="early-access">
+        <div>
+          <p class="eyebrow">Early beta</p>
+          <h2>Try HobbyTrack early and help shape what comes next.</h2>
+          <p>
+            HobbyTrack is in a focused private beta. The free MVP is ready to try
+            on this device, and feedback from real practice routines will guide
+            the next round of improvements.
+          </p>
+        </div>
+        <div class="beta-actions" aria-label="Early access and feedback actions">
+          <a class="button button-primary" href="#app" data-open-auth data-plan="free">Start Free</a>
+          <a
+            class="button button-secondary"
+            href="mailto:hello.hobbytrack@outlook.com?subject=HobbyTrack%20Early%20Access"
+          >
+            Join Beta
+          </a>
+          <a
+            class="button button-secondary"
+            href="mailto:hello.hobbytrack@outlook.com?subject=HobbyTrack%20Feedback"
+          >
+            Send Feedback
+          </a>
+          <p>
+            No form is connected yet; these links open email placeholders for beta
+            requests and feedback.
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand" href="#" aria-label="HobbyTrack home">
+        <span class="brand-mark" aria-hidden="true">H</span>
+        <span>HobbyTrack</span>
+      </a>
+      <nav aria-label="Footer navigation">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#early-access">Beta</a>
+        <a href="#faq">FAQ</a>
+        <a href="mailto:hello.hobbytrack@outlook.com?subject=HobbyTrack%20Question">Contact</a>
+        <a href="#">X</a>
+        <a href="#">LinkedIn</a>
+      </nav>
+      <p>&copy; 2026 HobbyTrack. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
