@@ -1,0 +1,30 @@
+<svg width="560" height="128" viewBox="0 0 560 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">HobbyTrack logo</title>
+  <desc id="desc">A rounded-square HobbyTrack app icon with a simple hobby grid beside the HobbyTrack wordmark.</desc>
+  <defs>
+    <linearGradient id="trackGradient" x1="286" y1="40" x2="405" y2="86" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#137C7A"/>
+      <stop offset="1" stop-color="#38A58F"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="16" y="16" width="96" height="96" rx="26" fill="#F7FAF8" stroke="#1F3A3A" stroke-width="3"/>
+
+  <rect x="34" y="34" width="28" height="28" rx="8" fill="#FFFFFF" stroke="#D9E4DF" stroke-width="2"/>
+  <rect x="66" y="34" width="28" height="28" rx="8" fill="#FFFFFF" stroke="#D9E4DF" stroke-width="2"/>
+  <rect x="34" y="66" width="28" height="28" rx="8" fill="#FFFFFF" stroke="#D9E4DF" stroke-width="2"/>
+  <rect x="66" y="66" width="28" height="28" rx="8" fill="#FFFFFF" stroke="#D9E4DF" stroke-width="2"/>
+
+  <path d="M48 41.5L50.2 45.9L55 46.6L51.5 50L52.3 54.8L48 52.5L43.7 54.8L44.5 50L41 46.6L45.8 45.9L48 41.5Z" fill="#137C7A"/>
+
+  <path d="M73.8 49.8C73.8 46.8 76.1 44.8 79 44.8H81C83.9 44.8 86.2 46.8 86.2 49.8V51.2C86.2 53 84.8 54.4 83.1 54.4C81.9 54.4 80.9 53.8 80.4 52.8H79.6C79.1 53.8 78.1 54.4 76.9 54.4C75.2 54.4 73.8 53 73.8 51.2V49.8Z" stroke="#1F3A3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M77.8 49.5H76.1M76.95 48.65V50.35M83.4 49.1H83.45M81.7 50.7H81.75" stroke="#1F3A3A" stroke-width="1.8" stroke-linecap="round"/>
+
+  <path d="M42.5 74.2C42.5 73.3 43.2 72.6 44.1 72.6H48C49.2 72.6 50.2 73.1 51 73.9C51.8 73.1 52.8 72.6 54 72.6H57.9C58.8 72.6 59.5 73.3 59.5 74.2V87.4H54C52.8 87.4 51.8 87.9 51 88.7C50.2 87.9 49.2 87.4 48 87.4H42.5V74.2Z" stroke="#1F3A3A" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M51 73.9V88.7" stroke="#1F3A3A" stroke-width="2" stroke-linecap="round"/>
+
+  <path d="M74 80.5L78.4 85L87 75.5" stroke="#137C7A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="136" y="78" fill="#1F2428" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="44" font-weight="760" letter-spacing="-0.02em">Hobby</text>
+  <text x="286" y="78" fill="url(#trackGradient)" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="44" font-weight="760" letter-spacing="-0.02em">Track</text>
+</svg>
