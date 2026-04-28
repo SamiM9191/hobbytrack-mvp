@@ -60,7 +60,7 @@ a {
   justify-content: space-between;
   width: min(calc(100% - var(--gutter)), var(--content));
   margin: 18px auto 0;
-  padding: 10px 12px;
+  padding: 7px 10px;
   border: 1px solid rgba(221, 212, 196, 0.82);
   border-radius: 999px;
   background: #fffdf8;
@@ -76,6 +76,7 @@ a {
   align-items: center;
   gap: 10px;
   font-weight: 760;
+  line-height: 1;
   letter-spacing: 0;
 }
 
@@ -84,6 +85,16 @@ a {
   width: 34px;
   height: 34px;
   flex: 0 0 auto;
+}
+
+.site-header .brand {
+  gap: 9px;
+  font-size: 0.98rem;
+}
+
+.site-header .brand-icon {
+  width: 40px;
+  height: 40px;
 }
 
 .main-nav {
@@ -119,6 +130,7 @@ a {
 }
 
 .nav-cta {
+  min-height: 42px;
   padding: 0 18px;
   background: var(--ink);
   color: #fffaf0;
@@ -1923,7 +1935,7 @@ textarea:focus {
 
   .site-header {
     margin-top: 12px;
-    padding: 9px 10px;
+    padding: 7px 9px;
   }
 
   .brand {
@@ -1932,7 +1944,7 @@ textarea:focus {
 
   .nav-cta {
     min-height: 40px;
-    padding: 0 14px;
+    padding: 0 13px;
   }
 
   .hero {
@@ -2259,15 +2271,20 @@ textarea:focus {
     font-size: 0.94rem;
   }
 
-  .brand-icon {
-    width: 30px;
-    height: 30px;
+  .site-header .brand {
+    gap: 7px;
+    font-size: 0.92rem;
+  }
+
+  .site-header .brand-icon {
+    width: 32px;
+    height: 32px;
   }
 
   .nav-cta {
-    min-height: 38px;
-    padding: 0 12px;
-    font-size: 0.88rem;
+    min-height: 36px;
+    padding: 0 11px;
+    font-size: 0.86rem;
   }
 
   .button {
