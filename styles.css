@@ -88,13 +88,13 @@ a {
 }
 
 .site-header .brand {
-  gap: 9px;
-  font-size: 0.98rem;
+  gap: 12px;
+  font-size: 1.38rem;
 }
 
 .site-header .brand-icon {
-  width: 40px;
-  height: 40px;
+  width: 52px;
+  height: 52px;
 }
 
 .main-nav {
@@ -130,7 +130,7 @@ a {
 }
 
 .nav-cta {
-  min-height: 42px;
+  min-height: 44px;
   padding: 0 18px;
   background: var(--ink);
   color: #fffaf0;
@@ -1935,7 +1935,7 @@ textarea:focus {
 
   .site-header {
     margin-top: 12px;
-    padding: 7px 9px;
+    padding: 6px 9px;
   }
 
   .brand {
@@ -2272,18 +2272,18 @@ textarea:focus {
   }
 
   .site-header .brand {
-    gap: 7px;
-    font-size: 0.92rem;
+    gap: 10px;
+    font-size: 1.08rem;
   }
 
   .site-header .brand-icon {
-    width: 32px;
-    height: 32px;
+    width: 42px;
+    height: 42px;
   }
 
   .nav-cta {
-    min-height: 36px;
-    padding: 0 11px;
+    min-height: 38px;
+    padding: 0 12px;
     font-size: 0.86rem;
   }
 
