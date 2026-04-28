@@ -1065,6 +1065,11 @@ details p {
   font-size: 0.94rem;
 }
 
+.beta-actions p a {
+  color: var(--ink);
+  font-weight: 720;
+}
+
 .final-cta {
   margin-top: clamp(104px, 11vw, 144px);
   padding: clamp(54px, 7vw, 82px) clamp(24px, 6vw, 72px);
