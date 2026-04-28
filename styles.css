@@ -1922,11 +1922,12 @@ textarea:focus {
   .social-proof,
   .site-footer,
   .site-header {
-    width: min(calc(100% - 28px), var(--max));
+    width: min(calc(100% - 24px), var(--max));
   }
 
   .site-header {
-    padding: 10px;
+    margin-top: 12px;
+    padding: 9px 10px;
   }
 
   .brand {
@@ -1939,26 +1940,65 @@ textarea:focus {
   }
 
   .hero {
-    padding: 58px 0 64px;
+    gap: 30px;
+    padding: 40px 0 48px;
   }
 
   h1 {
-    font-size: clamp(2.8rem, 14vw, 3.35rem);
-    line-height: 1.03;
+    margin-bottom: 20px;
+    font-size: clamp(2.34rem, 11.2vw, 3.05rem);
+    line-height: 1.06;
   }
 
   h2 {
-    font-size: clamp(2.05rem, 10vw, 2.55rem);
+    font-size: clamp(1.84rem, 8.4vw, 2.32rem);
+    line-height: 1.08;
+  }
+
+  h3 {
+    font-size: 1.08rem;
   }
 
   .hero-text,
   .section-heading p:not(.eyebrow),
-  .showcase-copy p {
-    font-size: 1.04rem;
+  .showcase-copy p,
+  .app-topline p:not(.eyebrow),
+  .auth-layout p,
+  .view-heading p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .eyebrow {
+    margin-bottom: 10px;
+    font-size: 0.76rem;
+  }
+
+  .hero-actions {
+    display: grid;
+    gap: 10px;
+  }
+
+  .hero-actions .button,
+  .beta-actions .button,
+  .price-card .button {
+    width: 100%;
+  }
+
+  .hero-proof {
+    gap: 8px 12px;
+    margin-top: 20px;
+    font-size: 0.92rem;
+  }
+
+  .hero-note {
+    margin-top: 24px;
+    font-size: 1.02rem;
+    line-height: 1.45;
   }
 
   .dashboard-frame {
-    padding: 16px;
+    padding: 14px;
     border-radius: 20px;
   }
 
@@ -1972,10 +2012,24 @@ textarea:focus {
   .dash-topbar {
     align-items: flex-start;
     flex-direction: column;
+    gap: 10px;
+  }
+
+  .dash-topbar h2 {
+    font-size: 1.16rem;
+  }
+
+  .dash-pill {
+    white-space: normal;
   }
 
   .featured-card {
-    min-height: 260px;
+    min-height: 230px;
+  }
+
+  .dash-card {
+    min-height: auto;
+    padding: 16px;
   }
 
   .progress-track {
@@ -2012,9 +2066,21 @@ textarea:focus {
     flex-direction: column;
   }
 
+  .price-card {
+    padding: 24px;
+  }
+
+  .price-card strong {
+    margin-top: 40px;
+  }
+
   .section-block,
   .product-showcase {
-    padding-top: 88px;
+    padding-top: 64px;
+  }
+
+  .section-heading {
+    margin-bottom: 30px;
   }
 
   .editorial-strip {
@@ -2028,8 +2094,8 @@ textarea:focus {
   }
 
   .beta-section {
-    margin-top: 88px;
-    padding: 30px 22px;
+    margin-top: 64px;
+    padding: 26px 20px;
     border-radius: 20px;
   }
 
@@ -2044,7 +2110,7 @@ textarea:focus {
   }
 
   .app-shell {
-    padding-top: 88px;
+    padding-top: 64px;
   }
 
   .app-topline {
@@ -2053,19 +2119,33 @@ textarea:focus {
 
   .product-frame {
     border-radius: 20px;
+    min-height: auto;
   }
 
   .product-main {
-    padding: 18px;
+    padding: 16px;
   }
 
   .product-nav {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    padding: 16px;
+    gap: 7px;
+    padding: 14px;
+  }
+
+  .product-brand {
+    margin-bottom: 6px;
+  }
+
+  .muted-link {
+    grid-column: auto;
   }
 
   .product-nav-link {
+    min-height: 42px;
+    padding: 9px 10px;
+    font-size: 0.9rem;
     text-align: center;
+    line-height: 1.25;
   }
 
   .view-heading.with-actions {
@@ -2096,7 +2176,70 @@ textarea:focus {
   .weekly-review-card,
   .milestones-card,
   .timeline-card {
-    padding: 22px;
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .auth-layout {
+    min-height: auto;
+    gap: 22px;
+  }
+
+  .auth-layout h3,
+  .view-heading h3 {
+    font-size: clamp(1.72rem, 8vw, 2.12rem);
+    line-height: 1.12;
+  }
+
+  .view-heading {
+    margin-bottom: 20px;
+  }
+
+  .guided-steps {
+    gap: 7px;
+  }
+
+  .guided-steps span {
+    min-height: 34px;
+    padding: 8px 9px;
+    font-size: 0.78rem;
+  }
+
+  input,
+  select {
+    min-height: 50px;
+  }
+
+  textarea {
+    min-height: 118px;
+  }
+
+  .today-plan {
+    min-height: auto;
+  }
+
+  .stat-card {
+    padding: 18px;
+  }
+
+  .stat-card strong {
+    font-size: 1.48rem;
+  }
+
+  .review-grid div,
+  .empty-state,
+  .session-feed article {
+    padding: 14px;
+  }
+
+  .hobby-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 13px;
+  }
+
+  .hobby-row em {
+    justify-self: start;
   }
 
   .compact-select-label {
@@ -2110,17 +2253,103 @@ textarea:focus {
 }
 
 @media (max-width: 420px) {
+  .site-header {
+    align-items: center;
+    flex-direction: row;
+    border-radius: 20px;
+  }
+
+  .brand {
+    font-size: 0.94rem;
+  }
+
+  .brand-mark {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+  }
+
+  .nav-cta {
+    min-height: 38px;
+    padding: 0 12px;
+    font-size: 0.88rem;
+  }
+
+  .button {
+    min-height: 48px;
+    padding: 0 18px;
+  }
+
+  .hero {
+    padding-top: 32px;
+  }
+
+  h1 {
+    font-size: clamp(2.18rem, 10.5vw, 2.72rem);
+  }
+
+  .hero-text {
+    margin-bottom: 24px;
+  }
+
+  .hero-proof {
+    display: grid;
+  }
+
+  .week-panel,
+  .preview-main,
+  .preview-cards article,
+  .focus-row,
+  .price-card,
+  details {
+    padding: 18px;
+  }
+
+  .price-card strong {
+    margin-top: 42px;
+    font-size: 2.35rem;
+  }
+
+  .recommend-label {
+    top: 16px;
+    right: 16px;
+  }
+
   .product-nav {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .product-nav-link {
-    text-align: left;
+    text-align: center;
   }
 
-  .site-header {
-    align-items: flex-start;
-    flex-direction: column;
-    border-radius: 20px;
+  .product-main {
+    padding: 14px;
+  }
+
+  .form-card,
+  .onboarding-card,
+  .today-plan,
+  .active-hobbies-card,
+  .sessions-card,
+  .weekly-review-card,
+  .milestones-card,
+  .timeline-card {
+    padding: 16px;
+  }
+
+  .view-actions {
+    display: grid;
+  }
+
+  .app-status {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .beta-actions p a,
+  .site-footer a {
+    overflow-wrap: anywhere;
   }
 }
