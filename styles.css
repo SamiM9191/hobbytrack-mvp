@@ -79,15 +79,11 @@ a {
   letter-spacing: 0;
 }
 
-.brand-mark {
-  display: grid;
+.brand-icon {
+  display: block;
   width: 34px;
   height: 34px;
-  place-items: center;
-  border-radius: 12px;
-  background: var(--green);
-  color: #fbf8ef;
-  font-size: 0.92rem;
+  flex: 0 0 auto;
 }
 
 .main-nav {
@@ -2263,10 +2259,9 @@ textarea:focus {
     font-size: 0.94rem;
   }
 
-  .brand-mark {
+  .brand-icon {
     width: 30px;
     height: 30px;
-    border-radius: 10px;
   }
 
   .nav-cta {
