@@ -24,7 +24,7 @@ Instead of gamifying hobbies with pressure-heavy streaks, HobbyTrack focuses on:
 - First next-step planning
 - Dashboard with today's focus, weekly progress, streak, total time, active hobbies, milestones, and timeline
 - Add-hobby flow with Free plan limit messaging
-- Session logging with date, minutes, focus, note, next step, and optional milestone
+- Session logging with date, duration, focus, note, next step, mood or energy, and optional milestone
 - Hobby detail view with weekly progress and recent sessions
 - Weekly review summary
 - Local persistence with `localStorage`
@@ -85,6 +85,9 @@ Suggested placeholders:
 - Cloud-backed accounts and persistence
 - Exportable progress history
 - More useful weekly reviews
+- AI-assisted weekly reviews
+- Smart next-step suggestions
+- Monthly progress summaries
 - Optional reminders
 - Improved charts and insights
 - Better onboarding templates for different hobby types

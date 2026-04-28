@@ -49,6 +49,7 @@ const HOBBY_TEMPLATES = {
   Ceramics: "Plan the next studio session",
   Journaling: "Write one short reflection",
 };
+const ENERGY_OPTIONS = new Set(["Steady", "Focused", "Low energy", "Energized", "Not noted"]);
 
 const toISODate = (date) => {
   const year = date.getFullYear();
@@ -119,6 +120,11 @@ const isValidISODate = (value) => {
 
 const normalizeDate = (value) => (isValidISODate(value) ? value : daysAgo(0));
 
+const normalizeEnergy = (value) => {
+  const energy = cleanText(value, 40, "Not noted");
+  return ENERGY_OPTIONS.has(energy) ? energy : "Not noted";
+};
+
 const normalizeState = (savedState) => {
   const fallback = createDefaultState();
   if (!isPlainObject(savedState)) {
@@ -145,14 +151,21 @@ const normalizeState = (savedState) => {
           plan: cleanText(hobby?.plan, 120, "Plan one small session"),
           streak: clampNumber(hobby?.streak, 0, 3650, 0),
           sessions: Array.isArray(hobby?.sessions)
-            ? hobby.sessions.slice(0, MAX_SESSIONS_PER_HOBBY).map((session) => ({
-              createdAt: normalizeDate(session?.createdAt),
-              minutes: clampNumber(session?.minutes, 5, 360, 5),
-              focus: cleanText(session?.focus, 120),
-              note: cleanText(session?.note, 500),
-              nextStep: cleanText(session?.nextStep, 120),
-              milestone: cleanText(session?.milestone, 120),
-            }))
+            ? hobby.sessions.slice(0, MAX_SESSIONS_PER_HOBBY).map((session) => {
+              const date = normalizeDate(session?.date || session?.createdAt);
+              const duration = clampNumber(session?.duration ?? session?.minutes, 5, 360, 5);
+              return {
+                date,
+                createdAt: date,
+                duration,
+                minutes: duration,
+                focus: cleanText(session?.focus, 120),
+                note: cleanText(session?.note, 500),
+                nextStep: cleanText(session?.nextStep, 120),
+                energy: normalizeEnergy(session?.energy || session?.mood),
+                milestone: cleanText(session?.milestone, 120),
+              };
+            })
             : [],
         };
       })
@@ -603,6 +616,10 @@ const createTimelineItem = (session) => {
     article.append(createElement("span", { text: `Focus: ${session.focus}` }));
   }
 
+  if (session.energy && session.energy !== "Not noted") {
+    article.append(createElement("span", { text: `Energy: ${session.energy}` }));
+  }
+
   if (session.milestone) {
     article.append(createElement("span", { text: `Milestone: ${session.milestone}` }));
   }
@@ -864,6 +881,7 @@ logSessionForm.addEventListener("submit", (event) => {
   const focus = document.querySelector("#sessionFocus").value.trim();
   const note = document.querySelector("#sessionNote").value.trim();
   const nextStep = document.querySelector("#sessionNextStep").value.trim();
+  const energy = document.querySelector("#sessionEnergy").value;
   const milestone = document.querySelector("#sessionMilestone").value.trim();
 
   if (!hobby) {
@@ -916,6 +934,11 @@ logSessionForm.addEventListener("submit", (event) => {
     return;
   }
 
+  if (!ENERGY_OPTIONS.has(energy)) {
+    setMessage(logSessionMessage, "Choose one mood or energy level for the session.");
+    return;
+  }
+
   if (containsMarkupCharacters(milestone)) {
     setMessage(logSessionMessage, "Use plain text for milestones.");
     return;
@@ -927,11 +950,14 @@ logSessionForm.addEventListener("submit", (event) => {
   }
 
   hobby.sessions.unshift({
+    date: createdAt,
     createdAt,
+    duration: minutes,
     minutes,
     focus,
     note,
     nextStep,
+    energy,
     milestone,
   });
   hobby.sessions = hobby.sessions.slice(0, MAX_SESSIONS_PER_HOBBY);
@@ -941,6 +967,7 @@ logSessionForm.addEventListener("submit", (event) => {
   logSessionForm.reset();
   document.querySelector("#sessionMinutes").value = 25;
   document.querySelector("#sessionDate").value = toISODate(new Date());
+  document.querySelector("#sessionEnergy").value = "Steady";
   setView("hobby-detail");
 });
 
