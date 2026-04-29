@@ -572,6 +572,26 @@ details {
   align-items: stretch;
 }
 
+.difference-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.difference-card {
+  min-height: 180px;
+  padding: clamp(24px, 3vw, 32px);
+  border: 1px solid rgba(221, 212, 196, 0.92);
+  border-radius: var(--radius);
+  background: #fffdf8;
+  box-shadow: var(--soft-shadow);
+}
+
+.difference-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
 .dash-card,
 .feature-card,
 .price-card,
@@ -967,6 +987,26 @@ details p {
   color: var(--muted);
   font-size: 0.96rem;
   line-height: 1.6;
+}
+
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.roadmap-card {
+  min-height: 190px;
+  padding: 26px;
+  border: 1px solid rgba(221, 212, 196, 0.92);
+  border-radius: var(--radius);
+  background: #fffdf8;
+  box-shadow: var(--soft-shadow);
+}
+
+.roadmap-card p {
+  margin-bottom: 0;
+  color: var(--muted);
 }
 
 .testimonial-grid {
@@ -1889,6 +1929,10 @@ textarea:focus {
     max-width: 640px;
   }
 
+  .roadmap-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .product-showcase {
     gap: 42px;
   }
@@ -2012,6 +2056,8 @@ textarea:focus {
 
   .dash-grid,
   .feature-grid,
+  .difference-grid,
+  .roadmap-grid,
   .testimonial-grid,
   .preview-cards {
     grid-template-columns: 1fr;
@@ -2183,7 +2229,9 @@ textarea:focus {
   .sessions-card,
   .weekly-review-card,
   .milestones-card,
-  .timeline-card {
+  .timeline-card,
+  .roadmap-card,
+  .difference-card {
     padding: 18px;
     border-radius: 16px;
   }
@@ -2346,7 +2394,9 @@ textarea:focus {
   .sessions-card,
   .weekly-review-card,
   .milestones-card,
-  .timeline-card {
+  .timeline-card,
+  .roadmap-card,
+  .difference-card {
     padding: 16px;
   }
 
