@@ -579,7 +579,7 @@ details {
 }
 
 .difference-card {
-  min-height: 180px;
+  min-height: 164px;
   padding: clamp(24px, 3vw, 32px);
   border: 1px solid rgba(221, 212, 196, 0.92);
   border-radius: var(--radius);
@@ -996,7 +996,7 @@ details p {
 }
 
 .roadmap-card {
-  min-height: 190px;
+  min-height: 172px;
   padding: 26px;
   border: 1px solid rgba(221, 212, 196, 0.92);
   border-radius: var(--radius);
@@ -2232,6 +2232,7 @@ textarea:focus {
   .timeline-card,
   .roadmap-card,
   .difference-card {
+    min-height: auto;
     padding: 18px;
     border-radius: 16px;
   }
